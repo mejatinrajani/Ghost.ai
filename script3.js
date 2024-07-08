@@ -33,9 +33,12 @@ function takecommand(message){
 }
 
 
-
+let listen = false
 button.addEventListener('click', () =>{
-    speak("listening")
+    if(listen==false){
+        speak("listening")
+        listen = true
+    }
     text.textContent = ""
     button.style.background = "green"
     recognition.start()
